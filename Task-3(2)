@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = [39,78,195,117,156];
+var yValues = [18,54,36,108,90];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,10,100,1.0)",
+      borderColor: "rgba(0,50,100,0.5)",
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false,},
+    scales: {
+      yAxes: [{ticks: {min: 0, max:100}}],
+    }
+  },
+  options: {
+            scales: {
+              xAxes: [{ 
+                scaleLabel: {
+                  display: true,
+                  labelString: 'roll no.'
+                }
+              }],
+              yAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'age'
+                }
+              }],
+            }
+          },
+});
+</script>
+
+</body>
+</html>
