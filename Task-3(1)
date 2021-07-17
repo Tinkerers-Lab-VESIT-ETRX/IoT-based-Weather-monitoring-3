@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
+
+<div id="myPlot" style="width:100%;max-width:1000px"></div>
+
+<script>
+var xArray = ["september", "october", "november", "december"];
+var yArray = [30,1,2,3];
+
+var data = [{
+  x:xArray,
+  y:yArray,
+  type:"bar"
+}];
+
+var layout = {title:"Date and Month"};
+
+Plotly.newPlot("myPlot", data, layout);
+</script>
+
+</body>
+</html>
